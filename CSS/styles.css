@@ -1,0 +1,103 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+nav{
+    width:100%;
+    height:100px;
+    background-color:#000;
+}
+.checkbtn{
+    float:right;
+    margin-right:15px;
+    font-size:30px;
+    line-height:95px;
+    color:#fff;
+    display:none;
+}
+#check{
+    display:none;
+}
+img{
+    --size:60px;
+    width:var(--size);
+    height:var(--size);
+}
+.logo{
+    display:inline-block;
+    padding:20px 50px;
+}
+ul{
+    float:right;
+    margin-right:10px;
+    list-style:none;
+}
+li{
+    display:inline-block;
+    margin:0 10px;
+    line-height:65px;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    padding:10px 15px;
+    border-radius:10px;
+    text-transform:uppercase;
+}
+li a.active,
+li a:hover{
+    background-color:#00c3ff;
+    color:#000;
+    transition:all .5s ease;
+}
+section{
+    height:calc(100vh - 100px);
+    background-image:url(../assets/images/rascacielos-nueva-york.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+@media screen and (max-width:900px){
+    .logo{
+        padding-left:25px;
+    }
+    li a{
+        font-size:14px;
+    }
+}
+@media screen and (max-width:818px){
+    .checkbtn{
+        display:block;
+    }
+    ul{
+        position:fixed;
+        top:80px;
+        left:-100%;
+        width:100%;
+        height:100vh;
+        text-align:center;
+        transition:.3s;
+        background-color:#cacada;
+    }
+    li{
+        display:block;
+        margin:25px 0;
+        line-height:70px;
+    }
+    li a{
+        color:#000;
+        font-size:15px;
+    }
+    li a.active,
+    li a:hover{
+        background:none;
+        color:#f00;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
